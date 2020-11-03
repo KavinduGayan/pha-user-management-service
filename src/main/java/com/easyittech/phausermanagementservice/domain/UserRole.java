@@ -21,7 +21,7 @@ public class UserRole {
     @Column(name = "inserted_date")
     @Temporal(TemporalType.TIMESTAMP)
     private Date insertedDate;
-    @ManyToMany
+    @ManyToMany(cascade=CascadeType.ALL)
     @JoinTable(
             name = "user_role_privilege",
             joinColumns = @JoinColumn(name = "role_id" ),

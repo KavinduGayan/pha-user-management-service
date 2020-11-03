@@ -22,7 +22,7 @@ public class User {
     @Column(name = "inserted_date")
     @Temporal(TemporalType.TIMESTAMP)
     private Date insertedDate;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY,cascade=CascadeType.ALL)
     @JoinColumn(name = "role_id")
     private UserRole userRole;
 

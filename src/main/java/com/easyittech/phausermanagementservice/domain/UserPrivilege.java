@@ -20,6 +20,6 @@ public class UserPrivilege {
     @Column(name = "inserted_date")
     @Temporal(TemporalType.TIMESTAMP)
     private Date insertedDate;
-    @ManyToMany(mappedBy = "user_privileges")
+    @ManyToMany(mappedBy = "user_privileges",cascade=CascadeType.ALL)
     Set<UserRole> roles;
 }
